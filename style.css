@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroForte Premium | Sustentabilidade e o Futuro do Café</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header id="header">
+        <nav class="nav-container">
+            <div class="logo">
+                <i class="fa-solid fa-seedling brand-icon"></i>AGRO<span class="highlight">FORTE</span>
+            </div>
+            
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#inicio" class="active">Início</a></li>
+                <li><a href="#sustentabilidade">Sustentabilidade</a></li>
+                <li><a href="#cafe">A Força do Café</a></li>
+                <li><a href="#tecnologia">Tecnologia</a></li>
+                <li><a href="#contato" class="btn-cta">Fale Conosco</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="hero-badge"><i class="fa-solid fa-bolt"></i> Agroindústria de Alta Performance</span>
+            <h1>O Futuro do Agronegócio é <span>Sustentável e Forte</span></h1>
+            <p>Elevando o padrão da cafeicultura brasileira através de práticas regenerativas, rastreabilidade total por satélite e respeito supremo à nossa terra.</p>
+            <div class="hero-actions">
+                <a href="#sustentabilidade" class="btn-primary">Conhecer Soluções <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="#cafe" class="btn-secondary">Impacto do Café</a>
+            </div>
+        </div>
+        <div class="hero-wave">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C26.9,4.75,55.05,10.3,81.21,14.75,187.26,32.85,263.31,45.69,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+
+    <section id="sustentabilidade" class="section-container">
+        <div class="section-intro">
+            <span class="section-tag">Produtividade Perene</span>
+            <h2>Inovação Verde que Transforma o Campo</h2>
+            <div class="accent-line"></div>
+            <p>Descubra como o Agro Forte se consolida mitigando impactos ecológicos e potencializando colheitas recordes de maneira limpa.</p>
+        </div>
+
+        <div class="grid-cards">
+            <div class="card-premium">
+                <div class="card-icon-wrapper"><i class="fa-solid fa-cloud-sun-rain"></i></div>
+                <h3>Agricultura Inteligente</h3>
+                <p>Análise preditiva do clima via inteligência artificial para otimização em tempo real do plantio à colheita.</p>
+            </div>
+            <div class="card-premium featured-card">
+                <div class="card-icon-wrapper"><i class="fa-solid fa-droplet"></i></div>
+                <h3>Pegada Hídrica Zero</h3>
+                <p>Circuitos fechados de irrigação inteligente e reúso integral da água utilizada no processamento dos grãos.</p>
+                <span class="badge-featured">Mais Eficiente</span>
+            </div>
+            <div class="card-premium">
+                <div class="card-icon-wrapper"><i class="fa-solid fa-solar-panel"></i></div>
+                <h3>Matriz Energética Limpa</h3>
+                <p>Fazendas movidas a energia fotovoltaica e biomassa gerada através da casca descartada do café.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="cafe" class="cafe-section">
+        <div class="cafe-container">
+            <div class="cafe-image-side">
+                <div class="image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80" alt="Grãos de Café e Plantação">
+                    <div class="floating-box">
+                        <i class="fa-solid fa-award"></i>
+                        <span>Padrão Exportação Tipo Exportação</span>
+                    </div>
+                </div>
+            </div>
+            <div class="cafe-content-side">
+                <span class="section-tag alt-tag">O Motor Econômico</span>
+                <h2>O Ouro Negro e o Impacto no PIB Mundial</h2>
+                <p>O café não representa apenas uma bebida matinal; ele sustenta cadeias econômicas complexas de ponta a ponta. Nossa missão é certificar que cada xícara consumida globalmente financie um ecossistema com desenvolvimento justo, remunerando dignamente o produtor e regenerando biomas.</p>
+                
+                <div class="metrics-dashboard">
+                    <div class="metric-card">
+                        <span class="counter" data-target="38">0</span><span>%</span>
+                        <p>Aumento na exportação de grãos verdes especiais certificados.</p>
+                    </div>
+                    <div class="metric-card highlight-metric">
+                        <span class="counter" data-target="100">0</span><span>%</span>
+                        <p>Rastreabilidade garantida com tecnologia Blockchain.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tecnologia" class="tech-section">
+        <div class="section-intro light-text">
+            <span class="section-tag neon-tag">Próxima Geração</span>
+            <h2>Conectividade Total no Campo</h2>
+            <div class="accent-line orange-line"></div>
+        </div>
+        <div class="tech-banner">
+            <p>Combinamos maquinário pesado elétrico autônomo, drones de altíssima precisão para aplicação cirúrgica de bioinsumos e sensores IoT no solo para construir o agro mais forte e sustentável que o planeta já testemunhou.</p>
+        </div>
+    </section>
+
+    <footer id="contato">
+        <div class="footer-bottom">
+            <p>&copy; 2026 AGROFORTE. Todos os direitos reservados. Inovação, Sustentabilidade e Liderança no Café.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
