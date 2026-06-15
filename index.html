@@ -1,48 +1,209 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgroForte Premium | Sustentabilidade e o Futuro do Café</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    
+    <title>AgroForte | Futuro Sustentável & O Café</title>
     <link rel="stylesheet" href="style.css">
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
-    <header id="header">
-        <nav class="nav-container" aria-label="Navegação Principal">
-            <div class="logo">
-                <i class="fa-solid fa-seedling brand-icon" aria-hidden="true"></i>AGRO<span class="highlight">FORTE</span>
-            </div>
-            
-            <button class="menu-toggle" id="mobile-menu" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="nav-links">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-
-            <ul class="nav-links" id="nav-links">
-                <li><a href="#inicio" class="nav-item active">Início</a></li>
-                <li><a href="#sustentabilidade" class="nav-item">Sustentabilidade</a></li>
-                <li><a href="#cafe" class="nav-item">A Força do Café</a></li>
-                <li><a href="#tecnologia" class="nav-item">Tecnologia</a></li>
-                <li><a href="#contato" class="btn-cta">Fale Conosco</a></li>
+    <header class="navbar">
+        <div class="logo">
+            <i class="fa-solid fa-seedling"></i> Agro<span>Forte</span>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#sobre">O Manifesto</a></li>
+                <li><a href="#cafe">A Força do Café</a></li>
+                <li><a href="#sustentabilidade">Sustentabilidade</a></li>
+                <li><a href="#contato" class="btn-nav">Fale Conosco</a></li>
             </ul>
         </nav>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
     </header>
 
-    <main>
-        <section id="inicio" class="hero-section">
-            <div class="hero-overlay"></div>
-            <div class="hero-content">
-                <span class="hero-badge"><i class="fa-solid fa-bolt" aria-hidden="true"></i> Agroindústria de Alta Performance</span>
-                <h1>O Futuro do Agronegócio é <span>Sustentável e Forte</span></h1>
-                <p>Elevando o padrão da cafeicultura brasileira através de práticas regenerativas, rastreabilidade total por satélite e respeito supremo à nossa terra.</p>
-                <div class="hero-actions">
-                    <a href="#sustentabilidade" class="btn-primary">Conhecer Soluções <i class="fa-solid fa-arrow-right" aria-hidden
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Agro Forte: O Futuro Sustentável Nasce na Terra</h1>
+            <p>Unindo a tradição do café com a tecnologia de ponta para alimentar o amanhã de forma consciente.</p>
+            <div class="hero-buttons">
+                <a href="#cafe" class="btn btn-primary">Descubra o Café</a>
+                <a href="#sustentabilidade" class="btn btn-secondary">Nossos Pilares</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="metrics">
+        <div class="metric-card">
+            <i class="fa-solid fa-earth-americas"></i>
+            <h3 class="counter" data-target="100">0</h3>
+            <p>% Carbono Neutro</p>
+        </div>
+        <div class="metric-card">
+            <i class="fa-solid fa-mug-hot"></i>
+            <h3 class="counter" data-target="45">0</h3>
+            <p>Milhões de Sacas/Ano</p>
+        </div>
+        <div class="metric-card">
+            <i class="fa-solid fa-hand-holding-heart"></i>
+            <h3 class="counter" data-target="150">0</h3>
+            <p>Famílias Apoiadas</p>
+        </div>
+    </section>
+
+    <section id="sobre" class="section sobre">
+        <div class="container">
+            <div class="section-title">
+                <h2>O Manifesto Agro Forte</h2>
+                <p>A agricultura brasileira é a engrenagem do mundo, e a sustentabilidade é o óleo que garante o amanhã.</p>
+            </div>
+            <div class="sobre-grid">
+                <div class="sobre-text">
+                    <h3>Tecnologia a serviço da natureza</h3>
+                    <p>O conceito de Agro Forte não se limita à produtividade em larga escala. Ele habita o equilíbrio entre a máxima eficiência biológica e o respeito ao solo. Através de monitoramento via satélite, agricultura de precisão e manejo integrado, provamos que é possível produzir mais utilizando menos recursos.</p>
+                    <button class="btn btn-primary open-modal" data-modal="modal-manifesto">Ler Manifesto Completo</button>
+                </div>
+                <div class="sobre-img-placeholder">
+                    <i class="fa-solid fa-tractor"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cafe" class="section cafe-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>A Importância Vital do Café</h2>
+                <p>Muito além da xícara: o ouro negro que move a economia, gera empregos e lidera a transição verde.</p>
+            </div>
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3>Impacto Econômico</h3>
+                    <p>O café é um dos principais pilares da balança comercial agrícola, exportando para mais de 140 países.</p>
+                    <button class="btn-card open-modal" data-modal="modal-economia">Ver Dados <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-leaf"></i></div>
+                    <h3>Cultivo Sombreado</h3>
+                    <p>Práticas modernas de lavoura cafeeira sob a sombra de árvores nativas preservam a biodiversidade local.</p>
+                    <button class="btn-card open-modal" data-modal="modal-cultivo">Ver Detalhes <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fa-solid fa-users"></i></div>
+                    <h3>Desenvolvimento Social</h3>
+                    <p>A cafeicultura fixa o homem no campo com dignidade, promovendo cooperativismo e sucessão familiar justa.</p>
+                    <button class="btn-card open-modal" data-modal="modal-social">Ver Projetos <i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sustentabilidade" class="section sustentabilidade">
+        <div class="container">
+            <div class="section-title">
+                <h2>Futuro Sustentável na Prática</h2>
+                <p>Como transformamos teoria em ações que regeneram o ecossistema.</p>
+            </div>
+            <div class="tabs-container">
+                <div class="tabs-menu">
+                    <button class="tab-btn active" data-tab="tab-1">Água Responsável</button>
+                    <button class="tab-btn" data-tab="tab-2">Energia Limpa</button>
+                    <button class="tab-btn" data-tab="tab-3">Solo Vivo</button>
+                </div>
+                <div class="tab-content active" id="tab-1">
+                    <h3>Gestão Hídrica e Irrigação Gota a Gota</h3>
+                    <p>Utilizamos sistemas inteligentes que reduzem em até 40% o consumo de água nas plantações de café, aplicando a quantidade exata que a planta necessita de acordo com o clima em tempo real.</p>
+                </div>
+                <div class="tab-content" id="tab-2">
+                    <h3>Fazendas 100% Fotovoltaicas</h3>
+                    <p>Nossos centros de processamento e secagem de grãos utilizam energia solar e biomassa originada dos próprios resíduos do café, fechando o ciclo energético de forma limpa.</p>
+                </div>
+                <div class="tab-content" id="tab-3">
+                    <h3>Bioinsumos e Regeneração</h3>
+                    <p>Substituição progressiva de defensivos químicos por defensivos biológicos e adubação orgânica, mantendo a microbiota do solo ativa e capturando mais carbono da atmosfera.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contato" class="section contato">
+        <div class="container">
+            <div class="section-title">
+                <h2>Alie-se ao Movimento</h2>
+                <p>Seja você produtor, investidor ou entusiasta, o futuro do agro se constrói juntos.</p>
+            </div>
+            <div class="form-wrapper">
+                <form id="agro-contact-form">
+                    <div class="form-group">
+                        <label for="name">Nome Completo</label>
+                        <input type="text" id="name" required placeholder="Digite seu nome">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail Corporativo</label>
+                        <input type="email" id="email" required placeholder="seu@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="interest">Seu Interesse</label>
+                        <select id="interest">
+                            <option value="investidor">Quero Investir</option>
+                            <option value="produtor">Sou Produtor de Café</option>
+                            <option value="parceiro">Parceria Sustentável</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensagem</label>
+                        <textarea id="message" rows="5" required placeholder="Como podemos colaborar para um agro mais forte?"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 AgroForte. Todos os direitos reservados. Cultivando um amanhã sustentável.</p>
+    </footer>
+
+    <div class="modal" id="modal-manifesto">
+        <div class="modal-content">
+            <span class="close-modal-btn">&times;</span>
+            <h2>O Manifesto Completo</h2>
+            <p>Acreditamos que a terra não é uma herança de nossos pais, mas um empréstimo de nossos filhos. O Agro Forte une ciência de dados ao conhecimento ancestral do produtor rural para criar um ecossistema produtivo indestrutível e perfeitamente limpo.</p>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-economia">
+        <div class="modal-content">
+            <span class="close-modal-btn">&times;</span>
+            <h2>Dados Econômicos do Café</h2>
+            <p>O mercado do café movimenta bilhões anualmente. O foco em cafés especiais e certificados sustentáveis agrega até 60% mais valor ao produto final, beneficiando diretamente o produtor local.</p>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-cultivo">
+        <div class="modal-content">
+            <span class="close-modal-btn">&times;</span>
+            <h2>Sistemas Agroflorestais</h2>
+            <p>O café cultivado sob a proteção de árvores nativas amadurece de forma mais lenta e complexa, gerando grãos de altíssima qualidade (bebida estritamente mole) enquanto preserva fauna e flora locais.</p>
+        </div>
+    </div>
+
+    <div class="modal" id="modal-social">
+        <div class="modal-content">
+            <span class="close-modal-btn">&times;</span>
+            <h2>Impacto e Sucessão Familiar</h2>
+            <p>Garantimos certificações de Comércio Justo (Fair Trade) que asseguram que a maior porcentagem do lucro retorne para quem realmente trabalhou a terra, impulsionando escolas técnicas agrícolas nas comunidades.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

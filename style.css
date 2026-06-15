@@ -1,132 +1,423 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AgroForte Premium | Sustentabilidade e o Futuro do Café</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
-</head>
-<body>
+/* RESET DE ESTILOS & VARIÁVEIS */
+:root {
+    --primary-color: #00E676; /* Verde Elétrico / Sustentabilidade */
+    --secondary-color: #FF9100; /* Laranja Dourado / Força / Café */
+    --dark-bg: #121814; /* Grafite bem escuro com toque esverdeado */
+    --card-bg: #1E2621; /* Fundo dos cards */
+    --text-light: #F5F7F6;
+    --text-muted: #A0AFA6;
+    --transition: all 0.3s ease;
+}
 
-    <header id="header">
-        <nav class="nav-container">
-            <div class="logo">
-                <i class="fa-solid fa-seedling brand-icon"></i>AGRO<span class="highlight">FORTE</span>
-            </div>
-            
-            <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth;
+}
 
-            <ul class="nav-links">
-                <li><a href="#inicio" class="active">Início</a></li>
-                <li><a href="#sustentabilidade">Sustentabilidade</a></li>
-                <li><a href="#cafe">A Força do Café</a></li>
-                <li><a href="#tecnologia">Tecnologia</a></li>
-                <li><a href="#contato" class="btn-cta">Fale Conosco</a></li>
-            </ul>
-        </nav>
-    </header>
+body {
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+    overflow-x: hidden;
+}
 
-    <section id="inicio" class="hero-section">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <span class="hero-badge"><i class="fa-solid fa-bolt"></i> Agroindústria de Alta Performance</span>
-            <h1>O Futuro do Agronegócio é <span>Sustentável e Forte</span></h1>
-            <p>Elevando o padrão da cafeicultura brasileira através de práticas regenerativas, rastreabilidade total por satélite e respeito supremo à nossa terra.</p>
-            <div class="hero-actions">
-                <a href="#sustentabilidade" class="btn-primary">Conhecer Soluções <i class="fa-solid fa-arrow-right"></i></a>
-                <a href="#cafe" class="btn-secondary">Impacto do Café</a>
-            </div>
-        </div>
-        <div class="hero-wave">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V0C26.9,4.75,55.05,10.3,81.21,14.75,187.26,32.85,263.31,45.69,321.39,56.44Z" class="shape-fill"></path>
-            </svg>
-        </div>
-    </section>
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-    <section id="sustentabilidade" class="section-container">
-        <div class="section-intro">
-            <span class="section-tag">Produtividade Perene</span>
-            <h2>Inovação Verde que Transforma o Campo</h2>
-            <div class="accent-line"></div>
-            <p>Descubra como o Agro Forte se consolida mitigando impactos ecológicos e potencializando colheitas recordes de maneira limpa.</p>
-        </div>
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: rgba(18, 24, 20, 0.95);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(0, 230, 118, 0.1);
+    backdrop-filter: blur(10px);
+}
 
-        <div class="grid-cards">
-            <div class="card-premium">
-                <div class="card-icon-wrapper"><i class="fa-solid fa-cloud-sun-rain"></i></div>
-                <h3>Agricultura Inteligente</h3>
-                <p>Análise preditiva do clima via inteligência artificial para otimização em tempo real do plantio à colheita.</p>
-            </div>
-            <div class="card-premium featured-card">
-                <div class="card-icon-wrapper"><i class="fa-solid fa-droplet"></i></div>
-                <h3>Pegada Hídrica Zero</h3>
-                <p>Circuitos fechados de irrigação inteligente e reúso integral da água utilizada no processamento dos grãos.</p>
-                <span class="badge-featured">Mais Eficiente</span>
-            </div>
-            <div class="card-premium">
-                <div class="card-icon-wrapper"><i class="fa-solid fa-solar-panel"></i></div>
-                <h3>Matriz Energética Limpa</h3>
-                <p>Fazendas movidas a energia fotovoltaica e biomassa gerada através da casca descartada do café.</p>
-            </div>
-        </div>
-    </section>
+.logo {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--text-light);
+}
 
-    <section id="cafe" class="cafe-section">
-        <div class="cafe-container">
-            <div class="cafe-image-side">
-                <div class="image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=800&q=80" alt="Grãos de Café e Plantação">
-                    <div class="floating-box">
-                        <i class="fa-solid fa-award"></i>
-                        <span>Padrão Exportação Tipo Exportação</span>
-                    </div>
-                </div>
-            </div>
-            <div class="cafe-content-side">
-                <span class="section-tag alt-tag">O Motor Econômico</span>
-                <h2>O Ouro Negro e o Impacto no PIB Mundial</h2>
-                <p>O café não representa apenas uma bebida matinal; ele sustenta cadeias econômicas complexas de ponta a ponta. Nossa missão é certificar que cada xícara consumida globalmente financie um ecossistema com desenvolvimento justo, remunerando dignamente o produtor e regenerando biomas.</p>
-                
-                <div class="metrics-dashboard">
-                    <div class="metric-card">
-                        <span class="counter" data-target="38">0</span><span>%</span>
-                        <p>Aumento na exportação de grãos verdes especiais certificados.</p>
-                    </div>
-                    <div class="metric-card highlight-metric">
-                        <span class="counter" data-target="100">0</span><span>%</span>
-                        <p>Rastreabilidade garantida com tecnologia Blockchain.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+.logo i {
+    color: var(--primary-color);
+    margin-right: 8px;
+}
 
-    <section id="tecnologia" class="tech-section">
-        <div class="section-intro light-text">
-            <span class="section-tag neon-tag">Próxima Geração</span>
-            <h2>Conectividade Total no Campo</h2>
-            <div class="accent-line orange-line"></div>
-        </div>
-        <div class="tech-banner">
-            <p>Combinamos maquinário pesado elétrico autônomo, drones de altíssima precisão para aplicação cirúrgica de bioinsumos e sensores IoT no solo para construir o agro mais forte e sustentável que o planeta já testemunhou.</p>
-        </div>
-    </section>
+.logo span {
+    color: var(--secondary-color);
+}
 
-    <footer id="contato">
-        <div class="footer-bottom">
-            <p>&copy; 2026 AGROFORTE. Todos os direitos reservados. Inovação, Sustentabilidade e Liderança no Café.</p>
-        </div>
-    </footer>
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
 
-    <script src="script.js"></script>
-</body>
-</html>
+.nav-links li a {
+    color: var(--text-light);
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav-links li a:hover {
+    color: var(--primary-color);
+}
+
+.btn-nav {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    padding: 8px 18px;
+    border-radius: 30px;
+    color: var(--primary-color) !important;
+}
+
+.btn-nav:hover {
+    background: var(--primary-color);
+    color: var(--dark-bg) !important;
+}
+
+/* HERO SECTION */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(18, 24, 20, 0.8), rgba(18, 24, 20, 0.9)), 
+                url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+    background: linear-gradient(45deg, #fff, var(--primary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+    cursor: pointer;
+    border: none;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: var(--dark-bg);
+    margin-right: 15px;
+}
+
+.btn-primary:hover {
+    background: #00b359;
+    box-shadow: 0 0 20px rgba(0, 230, 118, 0.4);
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 2px solid var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+.btn-secondary:hover {
+    background: var(--secondary-color);
+    color: var(--dark-bg);
+}
+
+/* METRICAS */
+.metrics {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background: var(--card-bg);
+    padding: 40px 20px;
+    border-top: 3px solid var(--secondary-color);
+}
+
+.metric-card {
+    text-align: center;
+    padding: 20px;
+    min-width: 250px;
+}
+
+.metric-card i {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.metric-card h3 {
+    font-size: 3rem;
+    color: var(--text-light);
+}
+
+/* SECTIONS GERAIS */
+.section {
+    padding: 100px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title h2 {
+    font-size: 2.5rem;
+    color: var(--text-light);
+    margin-bottom: 15px;
+}
+
+.section-title p {
+    color: var(--text-muted);
+}
+
+/* SOBRE / MANIFESTO */
+.sobre-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.sobre-text h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+}
+
+.sobre-text p {
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.sobre-img-placeholder {
+    background: linear-gradient(135deg, var(--card-bg), #2a362e);
+    height: 350px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(0,230,118,0.2);
+}
+
+.sobre-img-placeholder i {
+    font-size: 6rem;
+    color: var(--primary-color);
+    opacity: 0.7;
+}
+
+/* CARD GRID (CAFÉ) */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: var(--card-bg);
+    padding: 40px 30px;
+    border-radius: 15px;
+    transition: var(--transition);
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    border-color: var(--secondary-color);
+    box-shadow: 0 10px 30px rgba(255, 145, 0, 0.15);
+}
+
+.card-icon i {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+}
+
+.card p {
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.btn-card {
+    background: none;
+    border: none;
+    color: var(--primary-color);
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* TABS (SUSTENTABILIDADE) */
+.tabs-container {
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 20px;
+}
+
+.tabs-menu {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.tab-btn {
+    background: transparent;
+    border: 2px solid rgba(255,255,255,0.1);
+    color: var(--text-light);
+    padding: 12px 24px;
+    border-radius: 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.tab-btn.active, .tab-btn:hover {
+    background: var(--primary-color);
+    color: var(--dark-bg);
+    border-color: var(--primary-color);
+}
+
+.tab-content {
+    display: none;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.tab-content.active {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+.tab-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+/* FORMULÁRIO */
+.form-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(0,230,118,0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    background: #121814;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    color: #fff;
+}
+
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.btn-block {
+    width: 100%;
+}
+
+/* MODAIS */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.8);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 15px;
+    max-width: 500px;
+    width: 90%;
+    position: relative;
+    border: 2px solid var(--secondary-color);
+}
+
+.close-modal-btn {
+    position: absolute;
+    top: 15px; right: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--text-muted);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background: #0b0f0c;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    color: var(--text-muted);
+}
+
+/* MOBILE NAV */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4
